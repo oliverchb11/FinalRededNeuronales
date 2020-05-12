@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Probando el plugin button de jQuery UI</title>
+    <link
+      type="text/css"
+      href="css/dot-luv/jquery-ui-1.8.1.custom.css"
+      rel="Stylesheet"
+    />
+
+    <style type="text/css">
+      body {
+        font-size: 0.7em;
+      }
+      .botonletra {
+        font-size: 0.8em;
+        margin: 2px;
+      }
+      .dialogletra {
+        font-size: 3em;
+        text-align: center;
+        padding-top: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="botonesletras"></div>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery-ui-1.8.1.custom.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var letras = [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "Ñ",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z",
+        ];
+        for (i = 0; i < letras.length; i++) {
+          //creo el span de la letra
+          letraActual = $('<span class="botonletra">' + letras[i] + "</span>");
+          letraActual.data("letra", letras[i]);
+          //lo convierto en un botón
+          letraActual.button();
+          //lo inserto en la página, en la capa con id botonesletras
+          $("#botonesletras").append(letraActual);
+        }
+        $(".botonletra").click(function () {
+          var caja = $(
+            '<div class="dialogletra" title="Has pulsado una letra">' +
+              $(this).data("letra") +
+              "</div>"
+          );
+          caja.dialog({
+            modal: true,
+            buttons: {
+              Ok: function () {
+                $(this).dialog("close");
+              },
+            },
+            show: "fold",
+            hide: "scale",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
