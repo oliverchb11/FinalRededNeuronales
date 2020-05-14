@@ -54,41 +54,40 @@
             <a class="nav-link" href="#">Plataforma</a>
           </li>
         </ul>
-      
-          <h4 class="mr-sm-2 nu">Oscar</h4>
-          <button
-            class="btn btn-danger my-2 my-sm-0"
-            type="submit"
-            routerLink="/"
-          >
-            Salir
-          </button>
-      
+
+        <h4 class="mr-sm-2 nu">Oscar</h4>
+        <button
+          class="btn btn-danger my-2 my-sm-0"
+          type="submit"
+          routerLink="/"
+        >
+          Salir
+        </button>
       </div>
     </nav>
- 
-      <section class="container">
-        <div class="logo-escrito">
-          Busca tu pelicula favorita
-        </div>
-        <div class="search">
-          <input
-            id="search-input"
-            type="text"
-            name="title"
-            placeholder="Inserte la pelicula que buscara"
-          />
-      <button onclick="getApiSearch()" id="estilo-boton">Buscar</button>
-        </div>
-        <div></div>
-        <div id="renderizado-datos"></div>
-        <form action="/api/peliculas" method="POST">
-        <h1>Prediccion:</h1>
-        <a id="prediccion"></a>
-        <div id="todo"></div>
-        <input type="submit" value="Enviar" id='botonhtml' />
-      </section>
-    </form>
+
+    <section class="container">
+      <div class="logo-escrito">
+        Busca tu pelicula favorita
+      </div>
+      <div class="search">
+        <input
+          id="search-input"
+          type="text"
+          name="title"
+          placeholder="Inserte la pelicula que buscara"
+        />
+        <button onclick="getApiSearch()" id="estilo-boton">Buscar</button>
+      </div>
+      <div></div>
+      <div id="renderizado-datos"></div>
+      <h1>Rating Prediction:</h1>
+      <a id="prediccion"></a>
+      <div id="pred"></div>
+      <br />
+      <button class="btn btn-primary" onclick="datos();">datos</button>
+    </section>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -106,7 +105,7 @@
     ></script>
     <script type="text/javascript" src="jsFiles/index.js"></script>
     <script type="text/javascript" src="jsFiles/predecir.js"></script>
-    <script type="text/javascript" src="jsFiles/lstm.js"></script>
+    <script type="text/javascript" src="jsFiles/mind.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </body>
 </html>

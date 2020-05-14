@@ -127,6 +127,10 @@ body::before {
   background: #384cbd;
   border-color: #384cbd;
   border-radius: 5px;
+  font-size: 15px;
+}
+#btn {
+  color: yellow;
 }
 #muestra :hover {
   color: yellow;
@@ -154,4 +158,5 @@ body::before {
   border-radius: 15px;
   border-color: #384cbd;
   margin-left: 3px;
+  font-size: 10px;
 }

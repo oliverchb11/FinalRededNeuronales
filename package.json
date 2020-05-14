@@ -1,20 +1,24 @@
 {
   "name": "bolsa",
   "version": "1.0.0",
-  "description": "Prediccion de precio bolsa de valores USD/COP",
+  "description": "Prediccion de peliculas",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "concurrently \"nodemon app.js\" \"nodemon src/public/js/mind.js\""
   },
-  "author": "Esteban Gomez",
+  "author": "Developers Team",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "brain.js": "^2.0.0-alpha.12",
+    "concurrently": "^5.2.0",
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "gpu.js": "^2.2.0",
+    "lstm": "0.0.0",
     "mongoose": "^5.9.13",
+    "morgan": "^1.10.0",
+    "node-mind": "^1.0.1",
     "sequelize": "^5.21.8",
     "thaw.js": "^1.2.2"
   },

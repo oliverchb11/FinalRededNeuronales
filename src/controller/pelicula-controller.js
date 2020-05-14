@@ -3,6 +3,7 @@ const PeliculaController = {};
 PeliculaController.getPeliculas = async (req, res) => {
   const Peliculas = await Pelicula.find();
   res.json(Peliculas);
+  res.render("index");
 };
 PeliculaController.CrearPelicula = async (req, res) => {
   console.log(req.body);

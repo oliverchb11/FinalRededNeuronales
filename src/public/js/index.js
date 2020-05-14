@@ -53,7 +53,7 @@ function getApiSearch() {
                 <div class="datos-api"><h2 name"title">${title}</h2>
                 <div class="datos-api2"><h1>${overview}</h1>
                       <span>
-                      <button class="fas fa-star" id="muestra" onClick="muestra();" ><a>Calificar</a></button>
+                      <button class="btn btn-primary fas fa-star" id="muestra" onClick="muestra();" ><a>Calificar</a></button>
                       <br>
                       <div id="contenido">
                       <br>
@@ -90,14 +90,13 @@ function getApiSearch() {
             var delButton = document.createElement("figure");
             docFrag.appendChild(delButton);
             delButton.innerHTML = `
-            <!--<form action="/api/peliculas" method="POST">-->
+            <form action="/api/peliculas" method="POST">
             <input type="text" value="${i}"  id="valor"  name="calificacion" />
             <input  type='text' value="${title}" id="titulo"  name= "title" />
             <input  type='text' value="${id}" id="titulo2"  name= "idpelicula" />
-            <li id="predic"> </li>
-            <button class="fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
+            <button class="btn btn-primary fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
          
-           <!-- </form> --> 
+            </form> 
       
             `;
             var estre = "";
