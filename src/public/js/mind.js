@@ -3,7 +3,7 @@
 const Mind = require("node-mind");
 
 function prededecri() {
-  fetch("http://localhost:4000/api/peliculas")
+  fetch("http://localhost:4000/api/pelis")
     .then((res) => res.json())
     .then((data) => {
       var dato = [1];
@@ -16,7 +16,7 @@ function prededecri() {
 }
 
 function datos() {
-  fetch("http://localhost:4000/api/peliculas")
+  fetch("http://localhost:4000/api/pelis")
     .then((res) => res.json())
     .then((data) => {
       var acomulado = 0;

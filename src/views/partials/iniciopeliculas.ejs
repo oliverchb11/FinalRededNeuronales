@@ -1,0 +1,33 @@
+<pre></pre>
+<div class="container">
+  <h1>Peliculas Agregadas</h1>
+  <div class="row">
+    <% for(var i = 0; i < Peliculas.length; i++) { %>
+    <div class="col-sm-6">
+      <div class="card" style="width: 18rem;">
+        <img
+          src="https://image.tmdb.org/t/p/w500/qv30R1uDDKTLWDlNc3qi6MRdRf0.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card-body">
+        <h5 class="card-title"><%= Peliculas[i].title %></h5>
+        <p class="card-text text-justify" id="comments">
+          <%= Peliculas[i].sinopsis %>
+        </p>
+        <% for(var y = 0; y < Peliculas[i].calificacion; y++) {%>
+        <button class="btn btn-primary fas fa-star" id="start">
+          <%= %>
+        </button>
+        <% } %>
+        <br />
+        <br />
+        <a href="#" class="btn btn-primary">Ver Pelicula</a>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>

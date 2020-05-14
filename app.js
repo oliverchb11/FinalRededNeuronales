@@ -14,21 +14,13 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //settings
 app.set("port", process.env.PORT || 4000);
-app.set("view engine", "html");
+app.set("view engine", "ejs");
 //views
-app.set("views", path.join(__dirname, "views"));
-// app.use("/htmlFiles", express.static(__dirname + "/views"));
-app.use("/cssFiles", express.static(__dirname + "/src/public/css"));
-app.use("/jsFiles", express.static(__dirname + "/src/public/js"));
-app.use("/imgFiles", express.static(__dirname + "/src/public/image"));
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/src/views/index.html");
-});
+app.set("views", path.join(__dirname, "src/views"));
 //routers
-app.use("/api/peliculas", router);
+app.use("/", router);
 //static files
-app.use(express.static(path.join(__dirname, "public")));
-
+app.use(express.static(path.join(__dirname, "src/public")));
 //servidor
 app.listen(app.get("port"), () => {
   console.log("Server en el puerto", app.get("port"));

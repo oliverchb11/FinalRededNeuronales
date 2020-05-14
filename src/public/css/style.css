@@ -1,5 +1,5 @@
 body {
-  background: url("../imgFiles/pelis.jpg");
+  background: url("../image/pelis.jpg");
 
   text-align: left;
   margin: auto;
@@ -140,6 +140,16 @@ body::before {
 }
 #titulo2 {
   display: none;
+}
+#sinopsis {
+  display: none;
+}
+#img {
+  display: none;
+}
+#start {
+  font-size: 11px;
+  color: yellow;
 }
 #valor {
   display: none;

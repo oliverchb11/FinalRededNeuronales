@@ -3,11 +3,21 @@ const PeliculaController = {};
 PeliculaController.getPeliculas = async (req, res) => {
   const Peliculas = await Pelicula.find();
   res.json(Peliculas);
+};
+PeliculaController.getPeliculasP = async (req, res) => {
   res.render("index");
 };
+PeliculaController.getPeliculasPelis = async (req, res) => {
+  const Peliculas = await Pelicula.find();
+  res.render("partials/peliculas", {
+    Peliculas,
+  });
+};
+
 PeliculaController.CrearPelicula = async (req, res) => {
   console.log(req.body);
   console.log("entro");
+
   const peliculas = new Pelicula(req.body);
   await peliculas
     .save()

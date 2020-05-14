@@ -7,5 +7,7 @@ const PeliculaShema = new Schema({
   title: String,
   calificacion: Number,
   prediccion: Number,
+  sinopsis: String,
+  imgUrl: String,
 });
 module.exports = mongoose.model("Pelicula", PeliculaShema);
