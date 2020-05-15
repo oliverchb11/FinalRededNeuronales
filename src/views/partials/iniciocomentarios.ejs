@@ -1,0 +1,66 @@
+<div class="container bg-dark">
+  <div class="row ml-1">
+    <div class="form-group">
+      <h1 id="fap" class="text-light">¿Falta Alguna Pelicula?</h1>
+    </div>
+    <div class="form-group">
+      <p class="text-center text-light" id="falta">
+        Hola si Falta alguna pelicula envianos un correo y la actualizaremos lo
+        mas pronto posible
+      </p>
+    </div>
+
+    <form action="/enviar/email" method="post">
+      <div class="form-group">
+        <label for="" class="text-light">Nombre De pelicula:</label>
+        <input type="text" class="form-control" name="nombre" />
+      </div>
+      <div class="form-group">
+        <label for="" class="text-light">Tipo</label>
+        <select class="form-control" name="tipo">
+          <option value="selecciona">selecciona...</option>
+          <option value="serie">Serie</option>
+          <option value="pelicula">Pelicula</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="" class="text-light">Genero de pelicula o serie</label>
+        <select class="form-control" name="genero">
+          <option value="selecciona">selecciona...</option>
+          <option value="accion">acción</option>
+          <option value="comedia">comedia</option>
+          <option value="De aventuras">De aventuras</option>
+          <option value="Dramáticas">Dramáticas</option>
+          <option value="Ciencia ficción">Ciencia ficción</option>
+          <option value="De guerra o bélicas">De guerra o bélicas</option>
+          <option value="Crimen ">Crimen </option>
+          <option value="Infantiles">Infantiles</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="" class="text-light">Correo Administrativo</label>
+        <input
+          type="text"
+          name="email"
+          class="form-control"
+          value="developersteambanda@gmail.com
+         
+    "
+        />
+      </div>
+      <div class="form-group">
+        <h4 class="text-light">
+          Para nostros es muy importante tu opinión ayudanos a crecer:
+        </h4>
+        <label for="" class="text-light">Comentarios o Sugerencias:</label>
+        <textarea
+          class="form-control"
+          height="200"
+          id="texteare"
+          name="comentarios"
+        ></textarea>
+      </div>
+      <button class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</div>

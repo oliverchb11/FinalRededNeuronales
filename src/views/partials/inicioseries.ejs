@@ -1,8 +1,7 @@
-<pre></pre>
 <div class="container">
-  <h1>Peliculas Calificadas:</h1>
+  <h1>Series Calificadas:</h1>
   <div class="row">
-    <% for(var i = 0; i < Peliculas.length; i++) { %>
+    <% for(var i = 0; i < serie.length; i++) { %>
     <div class="col-sm-6">
       <div class="card" style="width: 18rem;">
         <img
@@ -14,19 +13,19 @@
     </div>
     <div class="col-sm-6">
       <div class="card-body">
-        <h5 class="card-title text-danger"><%= Peliculas[i].title %></h5>
+        <h5 class="card-title text-danger"><%= serie[i].name %></h5>
         <h5>Sinopsis:</h5>
         <p class="card-text text-justify" id="comments">
-          <%= Peliculas[i].sinopsis %>
+          <%= serie[i].sinopsis %>
         </p>
-        <% for(var y = 0; y < Peliculas[i].calificacion; y++) {%>
-        <button class="btn btn-primary fas fa-star" id="start">
+        <% for(var y = 0; y < serie[i].calificacion; y++) {%>
+        <button class="btn btn-primary fas fa-star" id="start2">
           <%= %>
         </button>
         <% } %>
         <br />
         <br />
-        <a href="#" class="btn btn-primary">Agregar Favoritos</a>
+        <a href="#" class="btn btn-primary">Ver Pelicula</a>
       </div>
     </div>
     <% } %>

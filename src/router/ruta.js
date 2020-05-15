@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const PeliculaController = require("../controller/pelicula-controller");
-//ruta inicial y //ruta de peliculas
+//ruta inicial y //ruta de peliculas // ruta de series renderizadas
 router.get("/", PeliculaController.getPeliculasP);
 router.get("/peliculas", PeliculaController.getPeliculasPelis);
+router.get("/series", PeliculaController.getSeriesR);
+router.get("/comentarios", PeliculaController.getComentarios);
 //methodo get para ver api
 router.get("/api/series", PeliculaController.getSeries);
 router.get("/api/pelis", PeliculaController.getPeliculas);
@@ -13,4 +15,6 @@ router.post("/api/series", PeliculaController.CrearSerie);
 router.post("/api/peliculas", PeliculaController.CrearPelicula);
 router.post("/api/pelis", PeliculaController.CrearPelis);
 router.post("/api/seriesC", PeliculaController.CrearPelisC);
+//enviar correo electronico a grupo Developers Team Banda por gmail
+router.post("/enviar/email", PeliculaController.EnviarCorreo);
 module.exports = router;

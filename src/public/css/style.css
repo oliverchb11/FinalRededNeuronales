@@ -171,6 +171,10 @@ body::before {
   font-size: 11px;
   color: yellow;
 }
+#start2 {
+  font-size: 11px;
+  color: yellow;
+}
 #valor {
   display: none;
 }
@@ -203,4 +207,19 @@ body::before {
 #search-input {
   width: 400px;
   height: 70px;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
+#colpelis {
+  border: 1px solid blue;
+}
+#texteare {
+  height: 200px;
+}
+#fap {
+  text-align: center;
+  margin-left: 200px;
+}
+#falta {
+  margin-left: 10px;
 }
