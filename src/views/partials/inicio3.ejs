@@ -2,7 +2,7 @@
   <h1>Series Populares:</h1>
   <div class="row">
     <% for(var x = 0; x < series.length; x++) {%>
-    <div class="col-sm-4 mt-4">
+    <div class="col-sm-4 mt-4" id="card2">
       <div class="card bg-dark" style="width: 22.6rem;">
         <h2 class="card-text text-light">Trailer</h2>
         <h5 class="card-title text-light"><%= series[x].titulo %>:</h5>
@@ -19,7 +19,7 @@
           <a
             href="https://www.netflix.com/co/title/81128579"
             target="_blank"
-            class="btn btn-light"
+            class="btn btn-danger"
             ><img
               src="<%= series[x].plataforma  %> "
               alt=""

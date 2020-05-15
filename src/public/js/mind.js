@@ -48,6 +48,8 @@ function datos() {
         t = [idultimo, entero];
         console.log(t);
       }
+      document.getElementById("pe").style.display = "block";
+      document.getElementById("se").style.display = "block";
       datosSerie();
     });
 }
@@ -86,4 +88,5 @@ function datosSerie() {
       }
     });
 }
-////
+// funcion para esconder nombre de la peliculas y series que se va a predecir para activarlo despues
+// ///con el boton datos

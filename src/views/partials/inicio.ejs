@@ -1,14 +1,19 @@
-<section class="container">
+<section class="container" id="container">
   <div class="logo-escrito">
-    Busca tu pelicula favorita
+    Busca tu pelicula o serie favorita
   </div>
+
   <div class="search">
-    <input
-      id="search-input"
-      type="text"
-      name="title"
-      placeholder="Inserte la pelicula que buscara"
-    />
+    <div id="texto"></div>
+    <div id="input">
+      <input
+        id="search-input"
+        type="text"
+        name="title"
+        placeholder="Inserte la pelicula que buscara"
+      />
+    </div>
+
     <button onclick="getApiSearch()" id="estilo-boton">Buscar Peliculas</button>
     <button
       onclick="getApiSearchSeries()"
@@ -17,19 +22,27 @@
     >
       Buscar Series
     </button>
+    <button
+      class="btn btn-success"
+      id="estilo-boton-voz"
+      onclick="buscarVoz()"
+      ;
+    >
+      Buscar Voz
+    </button>
   </div>
   <div></div>
   <div id="renderizado-datos"></div>
   <h1>Rating Prediction:</h1>
-  <h3>Peliculas:</h3>
+  <h3 id="pe">Peliculas:</h3>
   <a id="prediccion"></a>
   <div id="pred"></div>
 
-  <h3>Series:</h3>
+  <h3 id="se">Series:</h3>
   <a id="prediccion2"></a>
   <div id="pred2"></div>
   <br />
-  <button class="btn btn-primary" onclick="datos();">datos</button>
+  <button class="btn btn-primary" onclick="datos();">Predicción</button>
 </section>
 
 <script
@@ -53,4 +66,5 @@
 <script type="text/javascript" src="js/api.js"></script>
 <script type="text/javascript" src="js/api-series.js"></script>
 <script type="text/javascript" src="js/series.js"></script>
+<script type="text/javascript" src="js/reconocimiento.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

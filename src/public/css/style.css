@@ -49,17 +49,27 @@ body {
   color: #ffffff;
   font-weight: bold;
   border-radius: 2px;
-
+  height: 70px;
   width: 15%;
 }
 #estilo-boton-serie {
   padding: 8px;
-
   color: #ffffff;
   font-weight: bold;
   border-radius: 2px;
-  width: 15%;
+  width: 21%;
+  height: 70px;
   margin-left: 5px;
+}
+#estilo-boton-voz {
+  padding: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 2px;
+
+  width: 21%;
+  margin-left: 5px;
+  height: 70px;
 }
 #renderizado-datos {
   background: #ffffff;
@@ -179,4 +189,18 @@ body::before {
   border-color: #384cbd;
   margin-left: 3px;
   font-size: 10px;
+}
+/*nuevos cambios de estilo*/
+#card1 {
+  margin-left: -3px;
+}
+#card2 {
+  margin-left: -3px;
+}
+#texto {
+  display: none;
+}
+#search-input {
+  width: 400px;
+  height: 70px;
 }
