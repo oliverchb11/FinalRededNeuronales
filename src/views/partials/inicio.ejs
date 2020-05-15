@@ -9,13 +9,25 @@
       name="title"
       placeholder="Inserte la pelicula que buscara"
     />
-    <button onclick="getApiSearch()" id="estilo-boton">Buscar</button>
+    <button onclick="getApiSearch()" id="estilo-boton">Buscar Peliculas</button>
+    <button
+      onclick="getApiSearchSeries()"
+      id="estilo-boton-serie"
+      class="btn btn-danger"
+    >
+      Buscar Series
+    </button>
   </div>
   <div></div>
   <div id="renderizado-datos"></div>
   <h1>Rating Prediction:</h1>
+  <h3>Peliculas:</h3>
   <a id="prediccion"></a>
   <div id="pred"></div>
+
+  <h3>Series:</h3>
+  <a id="prediccion2"></a>
+  <div id="pred2"></div>
   <br />
   <button class="btn btn-primary" onclick="datos();">datos</button>
 </section>
@@ -38,4 +50,7 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/predecir.js"></script>
 <script type="text/javascript" src="js/mind.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/api-series.js"></script>
+<script type="text/javascript" src="js/series.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

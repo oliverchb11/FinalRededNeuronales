@@ -1,17 +1,17 @@
 //requiere la libreria mind
 // const s = require("node-mind");
 
-const inicio = (document.getElementById(
-  "renderizado-datos"
-).innerHTML = `Inserte su busqueda en el buscador`);
+// const inicio = (document.getElementById(
+//   "renderizado-datos"
+// ).innerHTML = `Inserte su busqueda en el buscador`);
 
 // Function OnClick
-function getApiSearch() {
+function getApiSearchSeries() {
   //Obtengo el value del search input
   const valuesInput = document.getElementById("search-input").value;
 
   // URL de la API
-  const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=1e6296feeb7565b54f1f8ea079f7e70e&language=es&query=${valuesInput}`;
+  const apiUrl = `https://api.themoviedb.org/3/search/tv?api_key=f6aa14cdd8de77b073ab81ed80e212b5&language=es&query=${valuesInput}`;
 
   // Method
   const miInit = { method: "GET" };
@@ -20,7 +20,7 @@ function getApiSearch() {
   fetch(apiUrl, miInit)
     .then((response) => response.json())
     .then((data) => {
-      //console.log(data);
+      console.log(data.results[0]);
       // Obtengo data un array de las peliculas mas cercanas que encontro; filtro el primer array [0]
       let filtradoSearch = data.results[0];
       //console.log(filtradoSearch);
@@ -37,39 +37,39 @@ function getApiSearch() {
         var {
           id,
           poster_path,
-          title,
+          name,
           overview,
           vote_average,
           vote_count,
-          release_date,
+          first_air_date,
         } = filtradoSearch;
 
         document.getElementById("renderizado-datos").innerHTML = `
-           
-            <div class="resultado-api">
-                <div class="imagen-portada"><img src="https://image.tmdb.org/t/p/w500${poster_path}" />
-                <button class="btn btn-primary form-control">Pelicula</button>
-                </div>
-                <div class="datos-api"><h2 name"title">${title}</h2>
-                <div class="datos-api2"><h1>${overview}</h1>
-                      <span>
-                      <button class="btn btn-primary fas fa-star" id="muestra" onClick="muestra();" ><a>Calificar</a></button>
-                      <br>
-                      <div id="contenido">
-                      <br>
-                      <div id="estrella"></div>
-                      Año: ${release_date}<br />
-                     Estrellas: ${vote_average}<br />
-                      
-                      Votos: ${vote_count}<br />
-                     
-                      </div>
-                      </span>
-                </div>
-                </div>
-            </div>
-            
-            `;
+             
+              <div class="resultado-api">
+                  <div class="imagen-portada"><img src="https://image.tmdb.org/t/p/w500${poster_path}" />
+                  <button class="btn btn-danger form-control">Serie</button>
+                  </div>
+                  <div class="datos-api"><h2 name"title">${name}</h2>
+                  <div class="datos-api2"><h1>${overview}</h1>
+                        <span>
+                        <button class="btn btn-primary fas fa-star" id="muestra" onClick="muestra();" ><a>Calificar</a></button>
+                        <br>
+                        <div id="contenido">
+                        <br>
+                        <div id="estrella"></div>
+                        Año: ${first_air_date}<br />
+                       Estrellas: ${vote_average}<br />
+                        
+                        Votos: ${vote_count}<br />
+                       
+                        </div>
+                        </span>
+                  </div>
+                  </div>
+              </div>
+              
+              `;
       }
 
       document.getElementById("contenido").style.display = "none";
@@ -90,20 +90,20 @@ function getApiSearch() {
             var delButton = document.createElement("figure");
             docFrag.appendChild(delButton);
             delButton.innerHTML = `
-            <form action="/api/peliculas" method="POST">
-            <input type="text" value="${i}"  id="valor"  name="calificacion" />
-            <input  type='text' value="${title}" id="titulo"  name= "title" />
-            <input  type='text' value="${id}" id="titulo2"  name= "idpelicula" />
-            <input  type='text' value="${overview}" id="sinopsis"  name= "sinopsis" />
-            <img src="https://image.tmdb.org/t/p/w500${poster_path}" id='img' class="card-img-top" name="imgUrl"/>
-            <button class="btn btn-primary fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
-         
-            </form> 
-      
-            `;
+              <form action="/api/series" method="POST">
+              <input type="text" value="${i}"  id="valor"  name="calificacion" />
+              <input  type='text' value="${name}" id="titulo"  name= "name" />
+              <input  type='text' value="${id}" id="titulo2"  name= "idserie" />
+              <input  type='text' value="${overview}" id="sinopsis"  name= "sinopsis" />
+              <img src="https://image.tmdb.org/t/p/w500${poster_path}" id='img' class="card-img-top" name="imgUrl"/>
+              <button class="btn btn-primary fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
+           
+              </form> 
+        
+              `;
             var estre = "";
             delButton.onclick = function () {
-              fetch("http://localhost:4000/api/pelis")
+              fetch("http://localhost:4000/api/series")
                 .then((res) => res.json())
                 .then((data) => {
                   var acomulado = 0;
@@ -120,7 +120,7 @@ function getApiSearch() {
                     var entero = Math.round(todo);
                     console.log("acomulado de votacion", entero);
 
-                    estre = `<input type="text" value="${entero}" name='prediccion' ></input>`;
+                    estre = `<input type="text" value="${entero}" name='prediccion2' ></input>`;
                   }
                 });
               document.getElementById("predic").innerHTML = estre;

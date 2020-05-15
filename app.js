@@ -23,5 +23,11 @@ app.use("/", router);
 app.use(express.static(path.join(__dirname, "src/public")));
 //servidor
 app.listen(app.get("port"), () => {
-  console.log("Server en el puerto", app.get("port"));
+  console.log(
+    `
+  ********************************
+  ***Server en el puerto: ${app.get("port")} ***
+  ********************************
+   `
+  );
 });
