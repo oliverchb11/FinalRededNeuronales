@@ -19,7 +19,7 @@ function apiSeries() {
           </form>
           `;
       }
-      document.getElementById("text3").innerHTML = form;
+      // document.getElementById("text3").innerHTML = form;
     })
     .catch((e) => {
       if (e) {

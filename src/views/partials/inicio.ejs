@@ -12,23 +12,21 @@
         name="title"
         placeholder="Inserte la pelicula que buscara"
       />
+      <button class="btn" id="estilo-boton-voz" onclick="buscarVoz()" ;>
+        <img title="Buscar por audio" src="image/micro.png" />
+      </button>
     </div>
 
-    <button onclick="getApiSearch()" id="estilo-boton">Buscar Peliculas</button>
+    <button onclick="getApiSearch()" id="estilo-boton" title="Buscar Peliculas">
+      Buscar Peliculas
+    </button>
     <button
+      title="Buscar Series"
       onclick="getApiSearchSeries()"
       id="estilo-boton-serie"
       class="btn btn-danger"
     >
       Buscar Series
-    </button>
-    <button
-      class="btn btn-success"
-      id="estilo-boton-voz"
-      onclick="buscarVoz()"
-      ;
-    >
-      Buscar Voz
     </button>
   </div>
   <div></div>

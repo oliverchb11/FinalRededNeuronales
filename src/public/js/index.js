@@ -95,7 +95,7 @@ function getApiSearch() {
             <input  type='text' value="${title}" id="titulo"  name= "title" />
             <input  type='text' value="${id}" id="titulo2"  name= "idpelicula" />
             <input  type='text' value="${overview}" id="sinopsis"  name= "sinopsis" />
-            <img src="https://image.tmdb.org/t/p/w500${poster_path}" id='img' class="card-img-top" name="imgUrl"/>
+            <input type="image" src="https://image.tmdb.org/t/p/w500${poster_path}" id='img' class="card-img-top" name="imgUrl"/>
             <button class="btn btn-primary fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
          
             </form> 
