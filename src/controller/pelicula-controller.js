@@ -30,6 +30,9 @@ PeliculaController.getPeliculasP = async (req, res) => {
     series,
   });
 };
+PeliculaController.getPeliculasInicio = async (req, res) => {
+  res.render("inicio");
+};
 //controlador para mostrar la  pagina de peliculas y renderizando sus datos
 PeliculaController.getPeliculasPelis = async (req, res) => {
   const Peliculas = await Pelicula.find();
@@ -57,7 +60,7 @@ PeliculaController.CrearPelicula = async (req, res) => {
   await peliculas
     .save()
     .then((item) => {
-      res.redirect("/");
+      res.redirect("/inicio");
     })
     .catch((err) => {
       res.status(400).send("No Guardo en mogo db");
@@ -72,7 +75,7 @@ PeliculaController.CrearSerie = async (req, res) => {
   await series
     .save()
     .then((item) => {
-      res.redirect("/");
+      res.redirect("/inicio");
     })
     .catch((err) => {
       res.status(400).send("No Guardo en mogo db");

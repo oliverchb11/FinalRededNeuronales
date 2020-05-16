@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.contenedor-slider {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slider {
+  display: flex;
+  height: 100%;
+  width: 600%; /*Cambiar el ancho de acuerdo a la cantidad de imágenes, por ejm 10 imagenes = 1000%*/
+}
+
+.slider__section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slider__contenido {
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  opacity: 20;
+}
+.slider__contenido2 {
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  height: 250px;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  opacity: 20;
+}
+.slider__img {
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-prev,
+.btn-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  font-family: monospace;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background: white;
+}
+
+.btn-prev {
+  left: 10px;
+}
+
+.btn-next {
+  right: 10px;
+}
+
+#text3 {
+  text-align: justify;
+  width: 780px;
+  text-align: left;
+  margin-left: 300px;
+  padding-bottom: 10px;
+}
+#text4 {
+  text-align: justify;
+  width: 780px;
+  text-align: left;
+  margin-left: 300px;
+  padding-bottom: 10px;
+}
+
+#herramientas {
+  float: left;
+  left: 50%;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 17;
+  margin-left: -70px;
+  position: relative;
+}
+#herramientas li {
+  float: left;
+  position: relative;
+  margin-left: 80px;
+  right: 50%;
+}
+
+#herramientas li img {
+  margin-top: 30px;
+  position: absolute;
+}
+#imagenesfrontend {
+  position: absolute;
+  margin-left: 190px;
+  margin-top: 15px;
+}
+
+#imagenesbackend {
+  position: absolute;
+  margin-left: 475px;
+  margin-top: 15px;
+}
+#imagenesdb {
+  position: absolute;
+  margin-left: 640px;
+  margin-top: 29px;
+}
+#imagenesmetodologia {
+  position: absolute;
+  margin-left: 810px;
+  margin-top: 15px;
+}
+#imagenesapi {
+  position: absolute;
+  margin-left: 940px;
+  margin-top: 5px;
+}
+#proyecto {
+  text-decoration: none;
+  color: #ffff;
+}
+#btninicio {
+  margin-left: 320px;
+}

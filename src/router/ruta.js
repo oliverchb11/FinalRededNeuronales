@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const PeliculaController = require("../controller/pelicula-controller");
 //ruta inicial y //ruta de peliculas // ruta de series renderizadas
-router.get("/", PeliculaController.getPeliculasP);
+router.get("/", PeliculaController.getPeliculasInicio);
+router.get("/inicio", PeliculaController.getPeliculasP);
 router.get("/peliculas", PeliculaController.getPeliculasPelis);
 router.get("/series", PeliculaController.getSeriesR);
 router.get("/comentarios", PeliculaController.getComentarios);
