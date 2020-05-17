@@ -1,9 +1,7 @@
 //requiere la libreria mind
 // const s = require("node-mind");
 
-const inicio = (document.getElementById(
-  "renderizado-datos"
-).innerHTML = `Inserte su busqueda en el buscador`);
+const inicio = (document.getElementById("renderizado-datos").innerHTML = ``);
 
 // Function OnClick
 function getApiSearch() {

@@ -1,31 +1,38 @@
-<div class="container bg-dark">
+<div class="container bg-info">
   <div class="row ml-1">
     <div class="form-group">
-      <h1 id="fap" class="text-light">¿Falta Alguna Pelicula?</h1>
+      <h1 id="fap" class="text-dark">¿Falta Alguna Pelicula?</h1>
     </div>
     <div class="form-group">
-      <p class="text-center text-light" id="falta">
+      <h5 class="text-dark" id="falta">
         Hola si Falta alguna pelicula envianos un correo y la actualizaremos lo
         mas pronto posible
-      </p>
+      </h5>
     </div>
 
     <form action="/enviar/email" method="post" id="form">
       <div class="form-group">
-        <label for="" class="text-light">Nombre De pelicula:</label>
+        <label for="" class="text-dark"
+          >Nombre De pelicula o Serie<span style="color: red;">*</span>:</label
+        >
         <input type="text" class="form-control" name="nombre" required />
       </div>
       <div class="form-group">
-        <label for="" class="text-light">Tipo</label>
-        <select class="form-control" name="tipo">
+        <label for="" class="text-dark"
+          >Tipo<span style="color: red;">*</span>:</label
+        >
+        <select class="form-control" name="tipo" required>
           <option value="selecciona">selecciona...</option>
           <option value="serie">Serie</option>
           <option value="pelicula">Pelicula</option>
+          <option value="pelicula">Programa de T.V</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="" class="text-light">Genero de pelicula o serie</label>
-        <select class="form-control" name="genero">
+        <label for="" class="text-dark"
+          >Genero de pelicula o serie<span style="color: red;">*</span>:</label
+        >
+        <select class="form-control" name="genero" required>
           <option value="selecciona">selecciona...</option>
           <option value="accion">acción</option>
           <option value="comedia">comedia</option>
@@ -38,11 +45,11 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="" class="text-light">Correo Administrativo</label>
+        <label for="" class="text-dark">Correo Administrativo</label>
         <p id="texto-admin">
-          A este correo enviaras peliculas o series para que nuestro equipo de
-          trabajo las actualicé y ver tus sugerencias o comentarios para crecer
-          mas como equipo
+          A este correo enviaras peliculas o series que no esten en la
+          plataforma para que nuestro equipo de trabajo las actualicé y veremos
+          tus sugerencias y comentarios para crecer mas como equipo
         </p>
         <input
           type="text"
@@ -54,10 +61,10 @@
         />
       </div>
       <div class="form-group">
-        <h4 class="text-light">
+        <h4 class="text-dark">
           Para nostros es muy importante tu opinión ayudanos a crecer:
         </h4>
-        <label for="" class="text-light">Comentarios o Sugerencias:</label>
+        <label for="" class="text-dark">Comentarios o Sugerencias:</label>
         <textarea
           class="form-control"
           height="200"

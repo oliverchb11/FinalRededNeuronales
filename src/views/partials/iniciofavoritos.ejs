@@ -1,5 +1,5 @@
 <div class="container" style="width: 1300px;">
-  <h1>Peliculas Favoritas:</h1>
+  <h1><li class="fas fa-star" style="color: yellow;"></li>Peliculas Favoritas<li class="fas fa-star" style="color: yellow;"></li></h1>
   <div class="row">
     <% for(var x = 0; x <favori.length; x++){ %>  
     <div class="col-sm-4">
@@ -13,7 +13,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= favori[x].titulopelicula  %> </h5>
           <p class="card-text"></p>
-          <a href="#" class="btn btn-primary form-control">Ver</a>
+          <a href="#" class="btn btn-primary form-control">Pelicula</a>
           <p>ID:<%= favori[x].idpeliculafav  %> </p>
         </div>
       </div>
@@ -21,7 +21,7 @@
   <% } %> 
     </div>
   
-  <h1>Series Favoritas:</h1>
+    <h1><li class="fas fa-star" style="color: yellow;"></li>Series Favoritas<li class="fas fa-star" style="color: yellow;"></li></h1>
   <div class="row">
     <% for(var y = 0; y <favoriserie.length; y++ ){ %> 
     <div class="col-sm-4">
@@ -34,8 +34,8 @@
         />
         <div class="card-body">
           <h5 class="card-title"><%=favoriserie[y].tituloserie  %> </h5>
-          <p class="card-text"><%=favoriserie[y].idseriefav  %> </p>
-          <a href="#" class="btn btn-primary form-control">Ver</a>
+         <a href="#" class="btn btn-danger form-control">Serie</a>
+          <p class="card-text">ID:<%=favoriserie[y].idseriefav  %> </p>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   margin: auto;
-  width: 60%;
+  width: 70%;
   color: #384cbd;
 }
 
@@ -222,6 +222,7 @@ body::before {
 }
 #falta {
   margin-left: 10px;
+  text-align: left;
 }
 #salir {
   color: #fff;
@@ -230,7 +231,7 @@ body::before {
 #texto-admin {
   color: #fff;
   text-align: left;
-  width: 600px;
+  width: 650px;
 }
 #form {
   margin-left: 0px;
