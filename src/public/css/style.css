@@ -229,7 +229,7 @@ body::before {
   text-decoration: none;
 }
 #texto-admin {
-  color: #fff;
+  color: #000;
   text-align: left;
   width: 650px;
 }
