@@ -64,8 +64,10 @@ function datos() {
           document.getElementById("se").style.display = "block";
           document.getElementById("pred").style.display = "block";
           document.getElementById("pred2").style.display = "block";
+          document.getElementById("progreso").style.display = "none";
+          document.getElementById("prediciendo").style.display = "none";
         }
-      }, 1000);
+      }, 350);
     });
 }
 function datosSerie() {

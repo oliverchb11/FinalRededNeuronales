@@ -18,7 +18,9 @@
         </div>
       </div>
     </div>
-  <% } %> 
+  <% } %> <% if (favori=='') { %> 
+    <h1 style='margin-left: 340px;'>No hay peliculas en favoritos</h1>
+    <% } %> 
     </div>
   
     <h1><li class="fas fa-star" style="color: yellow;"></li>Series Favoritas<li class="fas fa-star" style="color: yellow;"></li></h1>
@@ -40,6 +42,9 @@
       </div>
     </div>
   <% } %> 
+  <% if (favoriserie=='') { %> 
+    <h1 style='margin-left: 360px;'>No hay Series en favoritos</h1>
+    <% } %> 
   </div>
 </div>
 </div>
