@@ -43,14 +43,29 @@ function datos() {
         }
 
         document.getElementById("pred").innerHTML = texto;
+        document.getElementById("pred").style.display = "none";
         ////////////////acomulado de las votaciones///
         t = [];
         t = [idultimo, entero];
-        console.log(t);
+        console.log("valor t", t);
       }
-      document.getElementById("pe").style.display = "block";
-      document.getElementById("se").style.display = "block";
+      document.getElementById("prediciendo").style.display = "block";
       datosSerie();
+      var progreso = 0;
+      var idIterval = setInterval(function () {
+        // Aumento en 10 el progeso
+        progreso += 10;
+        $("#bar").css("width", progreso + "%");
+
+        //Si llegó a 100 elimino el interval
+        if (progreso == 100) {
+          clearInterval(idIterval);
+          document.getElementById("pe").style.display = "block";
+          document.getElementById("se").style.display = "block";
+          document.getElementById("pred").style.display = "block";
+          document.getElementById("pred2").style.display = "block";
+        }
+      }, 1000);
     });
 }
 function datosSerie() {
@@ -81,6 +96,7 @@ function datosSerie() {
         }
 
         document.getElementById("pred2").innerHTML = texto;
+        document.getElementById("pred2").style.display = "none";
         ////////////////acomulado de las votaciones///
         t = [];
         t = [idultimo, entero];
