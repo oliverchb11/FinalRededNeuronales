@@ -3,36 +3,60 @@
   <h1>Peliculas Calificadas:</h1>
   <div class="row">
     <% for(var i = 0; i < Peliculas.length; i++) { %>
-    <div class="col-sm-6">
-      <div class="card" style="width: 18rem;">
-        <img
-          src="https://image.tmdb.org/t/p/w500/qv30R1uDDKTLWDlNc3qi6MRdRf0.jpg"
-          class="card-img-top"
-          alt="..."
-        />
+  
+      <div class="col-sm-6">
+        <form action="/api/favoritos" method="post">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="<%= Peliculas[i].imgUrl  %> "
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
       </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card-body">
-        <h5 class="card-title text-danger"><%= Peliculas[i].title %></h5>
-        <h5>Sinopsis:</h5>
-        <p class="card-text text-justify" id="comments">
-          <%= Peliculas[i].sinopsis %>
-        </p>
-        <% for(var y = 0; y < Peliculas[i].calificacion; y++) {%>
-        <button class="btn btn-primary fas fa-star" id="start">
-          <%= %>
-        </button>
-        <% } %>
-        <br />
-        <br />
-        <a href="#" class="btn btn-primary"
-          ><li class="fas fa-star" style="color: yellow;"></li>
-          Agregar Favoritos
-          <li class="fas fa-star" style="color: yellow;"></li
-        ></a>
+      <div class="col-sm-6">
+        <div class="card-body">
+          <input
+            type="text"
+            name="titulopelicula"
+            style="border: 0; font-size: 20px;"
+            class="card-title text-danger"
+            value="<%=
+        Peliculas[i].title %>"
+          />
+          <input
+            style="display: none;"
+            type="text"
+            name="imagenpelicula"
+            value="<%= Peliculas[i].imgUrl  %>"
+          />
+          <h5>Sinopsis:</h5>
+          <p class="card-text text-justify" id="comments">
+            <%= Peliculas[i].sinopsis %>
+          </p>
+          <p>ID:<%= Peliculas[i].idpelicula %></p>
+          <input
+            style="display: none;"
+            type="text"
+            name="idpeliculafav"
+            value="<%= Peliculas[i].idpelicula %>"
+          />
+          <% for(var y = 0; y < Peliculas[i].calificacion; y++) {%>
+          <button class="btn btn-primary fas fa-star" id="start">
+            <%= %>
+          </button>
+          <% } %>
+          <br />
+          <br />
+          <button type="submit" class="btn btn-primary"
+            ><li class="fas fa-star" style="color: yellow;"></li>
+            Agregar Favoritos
+            <li class="fas fa-star" style="color: yellow;"></li
+          ></button>
+        </div>
+      </form>
       </div>
-    </div>
+ 
     <% } %>
   </div>
 </div>

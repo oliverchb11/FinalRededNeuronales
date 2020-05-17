@@ -2,6 +2,8 @@ const Pelicula = require("../models/peliculas-db");
 const Pelis = require("../models/pelis");
 const Serie = require("../models/series");
 const SerieC = require("../models/seriesC");
+const FavoritasPelicula = require("../models/favoritos-pelicula");
+const FavoritaSerie = require("../models/favoritos-series");
 //modulo para enviar correo electronico
 const nodemailer = require("nodemailer");
 const PeliculaController = {};
@@ -21,6 +23,16 @@ PeliculaController.getPelis = async (req, res) => {
   const pelis = await Pelis.find();
   res.json(pelis);
 };
+//controlador para mostrar la api de favoritos de peliculas
+PeliculaController.getFavoritosp = async (req, res) => {
+  const fav = await FavoritasPelicula.find();
+  res.json(fav);
+};
+//controlador para mostrar la api de favoritos de series
+PeliculaController.getFavoritoss = async (req, res) => {
+  const favs = await FavoritaSerie.find();
+  res.json(favs);
+};
 //controlador para mostrar la renderizacion de la api de paliculas y series con video
 PeliculaController.getPeliculasP = async (req, res) => {
   const pelis = await Pelis.find();
@@ -38,6 +50,15 @@ PeliculaController.getPeliculasPelis = async (req, res) => {
   const Peliculas = await Pelicula.find();
   res.render("partials/peliculas", {
     Peliculas,
+  });
+};
+//controlador para mostrar la  pagina de favoritos de peliuclas y renderizando sus datos
+PeliculaController.getFavoritos = async (req, res) => {
+  const favori = await FavoritasPelicula.find();
+  const favoriserie = await FavoritaSerie.find();
+  res.render("partials/favoritos", {
+    favori,
+    favoriserie,
   });
 };
 //controlador para mostrar la  pagina de series y renderizando sus datos
@@ -61,6 +82,36 @@ PeliculaController.CrearPelicula = async (req, res) => {
     .save()
     .then((item) => {
       res.redirect("/inicio");
+    })
+    .catch((err) => {
+      res.status(400).send("No Guardo en mogo db");
+    });
+};
+//controlador para gardar en mongo la pelicula de favoritos
+PeliculaController.CrearFavoritos = async (req, res) => {
+  console.log(req.body);
+  console.log("entro");
+
+  const favoritos = new FavoritasPelicula(req.body);
+  await favoritos
+    .save()
+    .then((item) => {
+      res.redirect("/favoritos");
+    })
+    .catch((err) => {
+      res.status(400).send("No Guardo en mogo db");
+    });
+};
+//controlador para gardar en mongo la serie de favoritos
+PeliculaController.CrearFavoritosSerie = async (req, res) => {
+  console.log(req.body);
+  console.log("entro");
+
+  const favoritosSerie = new FavoritaSerie(req.body);
+  await favoritosSerie
+    .save()
+    .then((item) => {
+      res.redirect("/favoritos");
     })
     .catch((err) => {
       res.status(400).send("No Guardo en mogo db");
@@ -150,7 +201,9 @@ PeliculaController.EnviarCorreo = async (req, res) => {
     }
   });
 
-  res.redirect("/comentarios");
+  res.redirect("/enviarcorreo");
 };
-
+PeliculaController.getCorreo = async (req, res) => {
+  res.render("partials/enviarcorreo");
+};
 module.exports = PeliculaController;

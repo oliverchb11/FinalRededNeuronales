@@ -95,7 +95,7 @@ function getApiSearchSeries() {
               <input  type='text' value="${name}" id="titulo"  name= "name" />
               <input  type='text' value="${id}" id="titulo2"  name= "idserie" />
               <input  type='text' value="${overview}" id="sinopsis"  name= "sinopsis" />
-              <img src="https://image.tmdb.org/t/p/w500${poster_path}" id='img' class="card-img-top" name="imgUrl"/>
+              <input type="text" value="https://image.tmdb.org/t/p/w500${poster_path}" id='img' class="card-img-top" name="imgUrl"/>
               <button class="btn btn-primary fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
            
               </form> 

@@ -227,3 +227,11 @@ body::before {
   color: #fff;
   text-decoration: none;
 }
+#texto-admin {
+  color: #fff;
+  text-align: left;
+  width: 600px;
+}
+#form {
+  margin-left: 0px;
+}

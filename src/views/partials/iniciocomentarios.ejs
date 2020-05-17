@@ -10,10 +10,10 @@
       </p>
     </div>
 
-    <form action="/enviar/email" method="post">
+    <form action="/enviar/email" method="post" id="form">
       <div class="form-group">
         <label for="" class="text-light">Nombre De pelicula:</label>
-        <input type="text" class="form-control" name="nombre" />
+        <input type="text" class="form-control" name="nombre" required />
       </div>
       <div class="form-group">
         <label for="" class="text-light">Tipo</label>
@@ -39,6 +39,11 @@
       </div>
       <div class="form-group">
         <label for="" class="text-light">Correo Administrativo</label>
+        <p id="texto-admin">
+          A este correo enviaras peliculas o series para que nuestro equipo de
+          trabajo las actualicé y ver tus sugerencias o comentarios para crecer
+          mas como equipo
+        </p>
         <input
           type="text"
           name="email"
@@ -61,7 +66,10 @@
         ></textarea>
       </div>
 
-      <button class="btn btn-primary">Enviar</button>
+      <button class="btn btn-success">Enviar</button>
+      <button class="btn btn-warning" type="reset" style="margin-left: 50px;">
+        Limpiar
+      </button>
       <!-- <input
         type="image"
         src="https://4.bp.blogspot.com/-Ls0guGxkwZg/WaynobKLnTI/AAAAAAAAKTM/uQ0elwKx9B8QBH_Ofmt4s0eLarHnTFXiQCLcBGAs/s1600/if%2Banidado.PNG"

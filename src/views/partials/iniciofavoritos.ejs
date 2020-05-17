@@ -1,0 +1,45 @@
+<div class="container" style="width: 1300px;">
+  <h1>Peliculas Favoritas:</h1>
+  <div class="row">
+    <% for(var x = 0; x <favori.length; x++){ %>  
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+        <img
+          src="<%= favori[x].imagenpelicula  %> "
+          class="card-img-top"
+          height="300"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><%= favori[x].titulopelicula  %> </h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary form-control">Ver</a>
+          <p>ID:<%= favori[x].idpeliculafav  %> </p>
+        </div>
+      </div>
+    </div>
+  <% } %> 
+    </div>
+  
+  <h1>Series Favoritas:</h1>
+  <div class="row">
+    <% for(var y = 0; y <favoriserie.length; y++ ){ %> 
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+        <img
+          src="<%= favoriserie[y].imagenserie %> "
+          class="card-img-top"
+          height="300"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><%=favoriserie[y].tituloserie  %> </h5>
+          <p class="card-text"><%=favoriserie[y].idseriefav  %> </p>
+          <a href="#" class="btn btn-primary form-control">Ver</a>
+        </div>
+      </div>
+    </div>
+  <% } %> 
+  </div>
+</div>
+</div>

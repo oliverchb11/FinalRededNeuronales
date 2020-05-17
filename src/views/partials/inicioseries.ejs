@@ -3,21 +3,39 @@
   <div class="row">
     <% for(var i = 0; i < serie.length; i++) { %>
     <div class="col-sm-6">
+      <form action="/api/favoritosSerie" method="post">
       <div class="card" style="width: 18rem;">
-        <img
-          src="https://image.tmdb.org/t/p/w500/qv30R1uDDKTLWDlNc3qi6MRdRf0.jpg"
-          class="card-img-top"
-          alt="..."
-        />
+        <img src="<%= serie[i].imgUrl  %> " class="card-img-top" alt="..." />
       </div>
     </div>
     <div class="col-sm-6">
       <div class="card-body">
-        <h5 class="card-title text-danger"><%= serie[i].name %></h5>
+        <input
+          type="text"
+          name="tituloserie"
+          style="border: 0; font-size: 20px;"
+          class="card-title text-danger"
+          value="<%=
+    serie[i].name %>"
+        />
+        <input
+          style="display: none;"
+          type="text"
+          name="imagenserie"
+          value="<%= serie[i].imgUrl  %>"
+        />
         <h5>Sinopsis:</h5>
         <p class="card-text text-justify" id="comments">
           <%= serie[i].sinopsis %>
         </p>
+
+        <p>ID:<%= serie[i].idserie %></p>
+        <input
+          style="display: none;"
+          type="text"
+          name="idseriefav"
+          value="<%= serie[i].idserie %>"
+        />
         <% for(var y = 0; y < serie[i].calificacion; y++) {%>
         <button class="btn btn-primary fas fa-star" id="start2">
           <%= %>
@@ -25,13 +43,14 @@
         <% } %>
         <br />
         <br />
-        <a href="#" class="btn btn-primary"
+        <button type="submit" class="btn btn-primary"
           ><li class="fas fa-star" style="color: yellow;"></li>
           Agregar Favoritos
           <li class="fas fa-star" style="color: yellow;"></li
-        ></a>
+        ></button>
       </div>
     </div>
+  </form>
     <% } %>
   </div>
 </div>
