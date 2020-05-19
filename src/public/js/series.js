@@ -29,7 +29,7 @@ function getApiSearchSeries() {
       if (filtradoSearch === undefined) {
         document.getElementById(
           "renderizado-datos"
-        ).innerHTML = `La pelicula no se encontro`;
+        ).innerHTML = `La serie no se encontro`;
 
         // Si encontro la pelicula renderizo datos
       } else {

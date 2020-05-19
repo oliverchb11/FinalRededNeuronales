@@ -19,7 +19,7 @@ body {
 .slider {
   display: flex;
   height: 100%;
-  width: 600%; /*Cambiar el ancho de acuerdo a la cantidad de imágenes, por ejm 10 imagenes = 1000%*/
+  width: 800%; /*Cambiar el ancho de acuerdo a la cantidad de imágenes, por ejm 10 imagenes = 1000%*/
 }
 
 .slider__section {
@@ -159,4 +159,8 @@ body {
 }
 #btninicio {
   margin-left: 320px;
+}
+#textog {
+  width: 1000px;
+  margin-left: 140px;
 }

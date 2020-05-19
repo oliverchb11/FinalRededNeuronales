@@ -218,8 +218,9 @@ body::before {
   margin-left: 200px;
 }
 #falta {
-  margin-left: 10px;
+  margin-left: 90px;
   text-align: left;
+  width: 500px;
 }
 #salir {
   color: #fff;
@@ -228,10 +229,12 @@ body::before {
 #texto-admin {
   color: #000;
   text-align: left;
-  width: 650px;
+  width: 500px;
+  text-align: justify;
 }
 #form {
-  margin-left: 0px;
+  margin-left: 90px;
+  width: 500px;
 }
 #peliscard {
   margin-left: 80px;
@@ -241,4 +244,6 @@ body::before {
 }
 #sinopsisP {
   text-align: justify;
+}
+#cotenedorcomentarios {
 }

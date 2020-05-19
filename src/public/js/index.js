@@ -45,6 +45,7 @@ function getApiSearch() {
         document.getElementById("renderizado-datos").innerHTML = `
            
             <div class="resultado-api">
+      
                 <div class="imagen-portada"><img src="https://image.tmdb.org/t/p/w500${poster_path}" />
                 <button class="btn btn-primary form-control">Pelicula</button>
                 </div>

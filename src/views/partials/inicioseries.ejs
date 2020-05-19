@@ -4,7 +4,7 @@
   <div class="row" id="peliscard">
     <% for(var i = 0; i < serie.length; i++) { %>
       <div class="col-sm-8 ml-5" >
-        <form action="/api/favoritos" method="post">
+        <form action="/api/favoritosSerie" method="post">
           <div class="card mb-3">
             <img
             src="<%= serie[i].imgUrl  %> "
@@ -12,8 +12,26 @@
             height="400px"
             alt="..."
           />
+          <input
+          value="<%= serie[i].imgUrl%>"
+          name="imagenserie"
+          style="display: none;"
+          class="card-img-top"
+          height="400px"
+          alt="..."
+        />
             <div class="card-body">
               <h3><%= serie[i].name  %> </h3>
+              <input
+              value="<%=  serie[i].name %>"
+              name="tituloserie"
+              style="display: none;"
+            />
+            <input
+            value="<%= serie[i].idserie %>"
+            name="idseriefav"
+            style="display: none;"
+          />
               <p class="card-text" id='sinopsisS'> <%= serie[i].sinopsis %></p>
               <p>Calificación:</p>
               <% for(var y = 0; y < serie[i].calificacion; y++) {%>
