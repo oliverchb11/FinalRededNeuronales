@@ -53,7 +53,7 @@ function getApiSearchSeries() {
                   <div class="datos-api"><h2 name"title">${name}</h2>
                   <div class="datos-api2"><h1>${overview}</h1>
                         <span>
-                        <button class="btn btn-primary fas fa-star" id="muestra" onClick="muestra();" ><a>Calificar</a></button>
+                        <button class="btn btn-danger fas fa-star" id="muestra" onClick="muestra();" ><a>Calificar</a></button>
                         <br>
                         <div id="contenido">
                         <br>
@@ -96,7 +96,7 @@ function getApiSearchSeries() {
               <input  type='text' value="${id}" id="titulo2"  name= "idserie" />
               <input  type='text' value="${overview}" id="sinopsis"  name= "sinopsis" />
               <input type="text" value="https://image.tmdb.org/t/p/w500${poster_path}" id='img' class="card-img-top" name="imgUrl"/>
-              <button class="btn btn-primary fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
+              <button class="btn btn-danger fas fa-star" onClick="v();" id="btnstart" title="${i}"></button>
            
               </form> 
         

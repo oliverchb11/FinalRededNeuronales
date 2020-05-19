@@ -39,7 +39,7 @@ function datos() {
         var texto = "";
 
         for (var n = 0; n < entero; n++) {
-          texto += ` <button class="btn btn-primary fas fa-star" id='btn' active></button>`;
+          texto += ` <button class="btn btn-primary fas fa-star" title='${n}' id='btn' active></button>`;
         }
 
         document.getElementById("pred").innerHTML = texto;
@@ -94,7 +94,7 @@ function datosSerie() {
         var texto = "";
 
         for (var n = 0; n < entero; n++) {
-          texto += ` <button class="btn btn-primary fas fa-star" id='btn' active></button>`;
+          texto += ` <button class="btn btn-danger fas fa-star" title='${n}' id='btn' active></button>`;
         }
 
         document.getElementById("pred2").innerHTML = texto;

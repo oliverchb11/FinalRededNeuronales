@@ -145,8 +145,6 @@ body::before {
   color: yellow;
 }
 #muestra {
-  background: #384cbd;
-  border-color: #384cbd;
   border-radius: 5px;
   font-size: 15px;
 }
@@ -189,9 +187,7 @@ body::before {
 } */
 
 #btnstart {
-  background: #384cbd;
   border-radius: 15px;
-  border-color: #384cbd;
   margin-left: 3px;
   font-size: 10px;
 }
@@ -236,4 +232,13 @@ body::before {
 }
 #form {
   margin-left: 0px;
+}
+#peliscard {
+  margin-left: 80px;
+}
+#sinopsisS {
+  text-align: justify;
+}
+#sinopsisP {
+  text-align: justify;
 }
