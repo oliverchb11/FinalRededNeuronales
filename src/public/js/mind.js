@@ -106,5 +106,6 @@ function datosSerie() {
       }
     });
 }
+
 // funcion para esconder nombre de la peliculas y series que se va a predecir para activarlo despues
 // ///con el boton datos

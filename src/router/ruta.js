@@ -24,4 +24,7 @@ router.post("/api/favoritosSerie", PeliculaController.CrearFavoritosSerie);
 //enviar correo electronico a grupo Developers Team Banda por gmail
 router.post("/enviar/email", PeliculaController.EnviarCorreo);
 router.get("/enviarcorreo", PeliculaController.getCorreo);
+//metodos delete para eliminar favoritos de peliculas y series
+router.get("/eliminar/serie/:id", PeliculaController.deleteSerie);
+router.get("/eliminar/pelicula/:id", PeliculaController.deletePelicula);
 module.exports = router;

@@ -3,58 +3,56 @@
   <h1>Series Calificadas:</h1>
   <div class="row" id="peliscard">
     <% for(var i = 0; i < serie.length; i++) { %>
-      <div class="col-sm-8 ml-5" >
-        <form action="/api/favoritosSerie" method="post">
-          <div class="card mb-3">
-            <img
+    <div class="col-sm-8 ml-5">
+      <form action="/api/favoritosSerie" method="post">
+        <div class="card mb-3">
+          <img
             src="<%= serie[i].imgUrl  %> "
             class="card-img-top"
             height="400px"
             alt="..."
           />
           <input
-          value="<%= serie[i].imgUrl%>"
-          name="imagenserie"
-          style="display: none;"
-          class="card-img-top"
-          height="400px"
-          alt="..."
-        />
-            <div class="card-body">
-              <h3><%= serie[i].name  %> </h3>
-              <input
+            value="<%= serie[i].imgUrl%>"
+            name="imagenserie"
+            style="display: none;"
+            class="card-img-top"
+            height="400px"
+            alt="..."
+          />
+          <div class="card-body">
+            <h3><%= serie[i].name %></h3>
+            <input
               value="<%=  serie[i].name %>"
               name="tituloserie"
               style="display: none;"
             />
             <input
-            value="<%= serie[i].idserie %>"
-            name="idseriefav"
-            style="display: none;"
-          />
-              <p class="card-text" id='sinopsisS'> <%= serie[i].sinopsis %></p>
-              <p>Calificación:</p>
-              <% for(var y = 0; y < serie[i].calificacion; y++) {%>
-                <button class="btn btn-danger fas fa-star" id="start">
-                  <%= %>
-                </button>
-                <% } %>
-                <br>
-                <br>
-                <button type="submit" class="btn btn-danger"
-                ><li class="fas fa-star" style="color: yellow;"></li>
-                Agregar a Favoritos
-                <li class="fas fa-star" style="color: yellow;"></li
-              ></button>
-            </div>
+              value="<%= serie[i].idserie %>"
+              name="idseriefav"
+              style="display: none;"
+            />
+            <p class="card-text" id="sinopsisS"><%= serie[i].sinopsis %></p>
+            <p>Calificación:</p>
+            <% for(var y = 0; y < serie[i].calificacion; y++) {%>
+            <button class="btn btn-danger fas fa-star" id="start">
+              <%= %>
+            </button>
+            <% } %>
+            <br />
+            <br />
+            <button type="submit" class="btn btn-danger">
+              <li class="fas fa-star" style="color: yellow;"></li>
+              Agregar a Favoritos
+              <li class="fas fa-star" style="color: yellow;"></li>
+            </button>
           </div>
-      </div>
-      <% } %><% if (serie==''){ %> 
-        <h1 style='margin-left:78px;'>No hay Series calificadas</h1>
-          <% } %> 
+        </div>
       </form>
-      </div>
- 
-
     </div>
 
+    <% } %><% if (serie==''){ %>
+    <h1 style="margin-left: 78px;">No hay Series calificadas</h1>
+    <% } %>
+  </div>
+</div>

@@ -140,6 +140,7 @@ function getApiSearch() {
 
   // aca es donde se predice
 }
+
 document.getElementById("pe").style.display = "none";
 document.getElementById("se").style.display = "none";
 document.getElementById("prediciendo").style.display = "none";

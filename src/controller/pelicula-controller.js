@@ -91,13 +91,13 @@ PeliculaController.CrearPelicula = async (req, res) => {
 PeliculaController.CrearFavoritos = async (req, res) => {
   console.log(req.body);
   console.log("entro");
-
   const favoritos = new FavoritasPelicula(req.body);
   await favoritos
     .save()
     .then((item) => {
-      res.redirect("/favoritos");
+      res.redirect("/peliculas");
     })
+
     .catch((err) => {
       res.status(400).send("No Guardo en mogo db");
     });
@@ -111,7 +111,7 @@ PeliculaController.CrearFavoritosSerie = async (req, res) => {
   await favoritosSerie
     .save()
     .then((item) => {
-      res.redirect("/favoritos");
+      res.redirect("/series");
     })
     .catch((err) => {
       res.status(400).send("No Guardo en mogo db");
@@ -205,5 +205,19 @@ PeliculaController.EnviarCorreo = async (req, res) => {
 };
 PeliculaController.getCorreo = async (req, res) => {
   res.render("partials/enviarcorreo");
+};
+////eliminar serie de favoritos
+PeliculaController.deleteSerie = async (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  await FavoritaSerie.findByIdAndDelete(id);
+  res.redirect("/favoritos");
+};
+////eliminar pelicula de favoritos
+PeliculaController.deletePelicula = async (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  await FavoritasPelicula.findByIdAndDelete(id);
+  res.redirect("/favoritos");
 };
 module.exports = PeliculaController;
