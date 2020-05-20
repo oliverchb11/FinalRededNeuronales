@@ -217,6 +217,7 @@ PeliculaController.deleteSerie = async (req, res) => {
 PeliculaController.deletePelicula = async (req, res) => {
   const id = req.params.id;
   console.log(id);
+
   await FavoritasPelicula.findByIdAndDelete(id);
   res.redirect("/favoritos");
 };
